@@ -64,18 +64,15 @@ Note:
 
 代码如下：
 
-Runtime: 16 ms, faster than 93.80% of C++ online submissions for Valid Sudoku.
-Memory Usage: 9.6 MB, less than 98.53% of C++ online submissions for Valid Sudoku.
+Runtime: 8 ms, faster than 99.98% of C++ online submissions for Valid Sudoku.
+Memory Usage: 9.4 MB, less than 98.82% of C++ online submissions for Valid Sudoku.
 
 ```c++
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-        bool ret = true;
         bool pos[10];
-        cout<<sizeof(pos)<<endl;
-        cout<<sizeof(int)<<endl;
-        
+
         // Raw
         for(int i=0; i<9; i++){
             memset(pos,0,sizeof(pos));
