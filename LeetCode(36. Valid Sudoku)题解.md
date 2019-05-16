@@ -91,7 +91,7 @@ public:
                 pos[board[i][j]-'0'] = true;
             }
         }
-        //Col
+        //Region3*3
         for(int i=0; i<=6; i+=3){
             for(int j=0; j<=6; j+=3){
                 memset(pos,0,sizeof(pos));
