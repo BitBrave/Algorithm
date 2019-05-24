@@ -31,6 +31,9 @@ Hard，主要是题意有点难以理解。这题要求的是从一个未排序�
 
 代码如下：
 
+Runtime: 4 ms, faster than 94.75% of C++ online submissions for First Missing Positive.
+Memory Usage: 8.8 MB, less than 60.83% of C++ online submissions for First Missing Positive.
+
 ```c++
 class Solution {
 public:
