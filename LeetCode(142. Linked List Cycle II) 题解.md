@@ -40,7 +40,7 @@ Can you solve it without using extra space?
 
 在不使用别的空间的情况下，首先使用双指针一个走一步一个走两步，如果最后会重合的话，说明有环，没有则算法结束返回NULL。然后还是双指针sp,fp,如果链表中存在环，那么fp和sp一定会相遇，当两个指针相遇的时候，我们设相遇点为c，此时fp和sp都指向了c，接下来令fp继续指向c结点，sp指向链表头结点head，此时最大的不同是fp的步数变成为每次走一步，令fp和sp同时走，每次一步，那么它们再次相遇的时候即为环的入口结点。
 
-这里有一个链接，很详细：https://blog.csdn.net/willduan1/article/details/50938210
+这里有一个链接，很详细：<https://blog.csdn.net/willduan1/article/details/50938210>
 
 代码如下：
 
