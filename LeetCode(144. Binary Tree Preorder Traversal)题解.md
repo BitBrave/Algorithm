@@ -53,4 +53,39 @@ public:
 };
 ```
 
+当然，可以使用迭代的方式（使用栈），符合题意。
+
+代码如下
+
+Runtime: 0 ms, faster than 100.00% of C++ online submissions for Binary Tree Preorder Traversal.
+Memory Usage: 9.1 MB, less than 65.89% of C++ online submissions for Binary Tree Preorder Traversal.
+
+```c++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> res;
+        if(root == NULL) return res;
+        stack<TreeNode*> S;
+        S.push(root);
+        while(!S.empty()){
+            root = S.top(); S.pop();
+            res.push_back(root->val);
+            if(root->right != NULL) S.push(root->right);
+            if(root->left != NULL) S.push(root->left);
+        }
+        return res;
+    }
+};
+```
+
 BitBrave, 2019-07-11
