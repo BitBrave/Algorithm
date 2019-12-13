@@ -68,8 +68,7 @@ public:
         for(int k=1; k<len; k++){
             for(int i=k; i<len; i++){
                 if(s[i-k]==s[i]) D[i-k][i] = 2 + D[i-k+1][i-1];
-                D[i-k][i] = max(D[i-k][i], D[i-k][i-1]);
-                D[i-k][i] = max(D[i-k][i], D[i-k+1][i]);
+                else D[i-k][i] = max(D[i-k][i-1], D[i-k+1][i]);
             }
         }
         return D[0][len-1];
